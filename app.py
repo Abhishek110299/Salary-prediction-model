@@ -9,7 +9,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST','GET'])
 def predict():
     '''
     For rendering results on HTML GUI
@@ -22,7 +22,7 @@ def predict():
 
     return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
 
-@app.route('/predict_api',methods=['POST'])
+@app.route('/predict_api',methods=['POST','GET'])
 def predict_api():
     '''
     For direct API calls trought request
