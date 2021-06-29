@@ -2,7 +2,18 @@
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-<body style="background-color: darkgrey;">
+	<style>
+	body {
+            
+            background-image: url("download.jfif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+            padding: 0px;
+        }
+	
+	
+	</style>
   
 </body>
   <meta charset="UTF-8">
@@ -22,7 +33,7 @@
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="experience" placeholder=" Years of Experience" required="required" />
         <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+	<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
